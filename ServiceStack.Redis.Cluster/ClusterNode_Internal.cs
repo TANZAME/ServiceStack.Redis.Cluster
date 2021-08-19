@@ -204,12 +204,12 @@ namespace ServiceStack.Redis.Cluster
             //序列化格式
             //命令的输出只是一个空格分隔的 CSV 字符串，其中每行代表集群中的一个节点。以下是输出示例：
 
-            //07c37dfeb235213a872192d90877d0cd55635b91 127.0.0.1:30004 slave e7d1eecce10fd6bb5eb35b9f99a514335d9ba9ca 0 1426238317239 4 connected
-            //67ed2db8d677e59ec4a4cefb06858cf2a1a89fa1 127.0.0.1:30002 master - 0 1426238316232 2 connected 5461-10922
-            //292f8b365bb7edb5e285caf0b7e6ddc7265d2f4f 127.0.0.1:30003 master - 0 1426238318243 3 connected 10923-16383
-            //6ec23923021cf3ffec47632106199cb7f496ce01 127.0.0.1:30005 slave 67ed2db8d677e59ec4a4cefb06858cf2a1a89fa1 0 1426238316232 5 connected
-            //824fe116063bc5fcf9f4ffd895bc17aee7731ac3 127.0.0.1:30006 slave 292f8b365bb7edb5e285caf0b7e6ddc7265d2f4f 0 1426238317741 6 connected
-            //e7d1eecce10fd6bb5eb35b9f99a514335d9ba9ca 127.0.0.1:30001 myself,master - 0 0 1 connected 0-5460
+            //07c37dfeb235213a872192d90877d0cd55635b91 127.0.0.1:30004@通讯端口 slave e7d1eecce10fd6bb5eb35b9f99a514335d9ba9ca 0 1426238317239 4 connected
+            //67ed2db8d677e59ec4a4cefb06858cf2a1a89fa1 127.0.0.1:30002@通讯端口 master - 0 1426238316232 2 connected 5461-10922
+            //292f8b365bb7edb5e285caf0b7e6ddc7265d2f4f 127.0.0.1:30003@通讯端口 master - 0 1426238318243 3 connected 10923-16383
+            //6ec23923021cf3ffec47632106199cb7f496ce01 127.0.0.1:30005@通讯端口 slave 67ed2db8d677e59ec4a4cefb06858cf2a1a89fa1 0 1426238316232 5 connected
+            //824fe116063bc5fcf9f4ffd895bc17aee7731ac3 127.0.0.1:30006@Password slave 292f8b365bb7edb5e285caf0b7e6ddc7265d2f4f 0 1426238317741 6 connected
+            //e7d1eecce10fd6bb5eb35b9f99a514335d9ba9ca 127.0.0.1:30001@通讯端口 myself,master - 0 0 1 connected 0-5460
             //每行由以下字段组成：
 
             //<id> <ip:port> <flags> <master> <ping-sent> <pong-recv> <config-epoch> <link-state> <slot> <slot> ... <slot>
