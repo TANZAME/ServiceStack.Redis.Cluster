@@ -2,7 +2,7 @@
   <PropertyGroup>
     <PackageId>ServiceStack.Redis.Cluster</PackageId>
     <AssemblyName>ServiceStack.Redis.Cluster</AssemblyName>
-    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net45</TargetFrameworks>
     <Title>C# Redis cluster client for the Redis NoSQL DB</Title>
     <PackageDescription>
       C# Redis cluster client base on ServiceStack.Redis
